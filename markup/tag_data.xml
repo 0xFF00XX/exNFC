@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="20dp"
+        >
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+
+            >
+
+
+            <!--            ID-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/idLabel"
+                    android:layout_weight="5"
+                    android:text="ID:"
+                    android:textAlignment="textEnd" />
+
+
+                <TextView
+                    android:id="@+id/idText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:text="" />
+            </TableRow>
+
+            <!--            ID HEX-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/idHexLabel"
+                    android:layout_weight="1"
+                    android:text="ID&#xA0;Hex:"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/idHexText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+
+            <!--            SIZE-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/sizeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size:"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/sizeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="" />
+            </TableRow>
+            <!--            SECTOR COUNT-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/sectorLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sector&#xA0;Count:"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/sectorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+            <!--            BLOCK COUNT -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/blockLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Block&#xA0;Count:"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/blockText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+            <!--            TECHNOLOGIES-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/techLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Technologies:"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/techText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:maxWidth="250dp"
+                    android:minWidth="100dp"
+                    android:text="" />
+            </TableRow>
+            <!--            TYPE-->
+            <TableRow android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/typeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Type:"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/typeText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+
+            <!--                        -->
+            <!--            SECTORS     -->
+            <!--                        -->
+            <!--            SECTOR 0-->
+            <TableRow android:layout_marginTop="40dp" />
+
+
+        </TableLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/resetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rescan"
+                app:cornerRadius="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.125">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/bruteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bruteforce"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resetBtn"
+                app:layout_constraintVertical_bias="0.437" />
+
+            <TextView
+                android:id="@+id/bruteProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bruteBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ScrollView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:id="@+id/sectorScrollArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+            <!--        <Button-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:backgroundTint="#757575"-->
+            <!--            app:cornerRadius="0dp">-->
+
+            <!--        </Button>-->
+
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            >
+        <LinearLayout
+            android:id="@+id/blockArea"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
